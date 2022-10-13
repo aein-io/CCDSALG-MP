@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Driver {
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -25,16 +25,18 @@ public class Main {
 
         // Modified Insertion Sort
         InsertionSort Modified = new InsertionSort();
-        Modified.Sort(sArray);
+
+        int[] indexArray = new int[sArray.length];
+        Modified.Sort(sArray, indexArray);
 
         System.out.println();
+
         System.out.println("Sorted Array");
 
-        for (int i = 0; i < end; i++) {
-            System.out.println(left + ": " + sArray[i]);
-            i++;
-        }
 
+        for (int i = 0; i < sArray.length; i++) {
+            System.out.println(indexArray[i] +": "+ sArray[i]);
+        }
         // Modified Merge Sort
 
     }
