@@ -30,13 +30,12 @@ public class Driver {
         Modified.Sort(sArray, suffixArray);
 
         System.out.println();
-
-        System.out.println("Sorted Array");
-
+        System.out.println("Insertion Sort");
 
         for (int i = 0; i < sArray.length; i++) {
             System.out.println(suffixArray[i] +": "+ sArray[i]);
         }
+
         // Modified Merge Sort
 
     }
