@@ -26,8 +26,8 @@ public class Driver {
         // Modified Insertion Sort
         InsertionSort Modified = new InsertionSort();
 
-        int[] indexArray = new int[sArray.length];
-        Modified.Sort(sArray, indexArray);
+        int[] suffixArray = new int[sArray.length];
+        Modified.Sort(sArray, suffixArray);
 
         System.out.println();
 
@@ -35,7 +35,7 @@ public class Driver {
 
 
         for (int i = 0; i < sArray.length; i++) {
-            System.out.println(indexArray[i] +": "+ sArray[i]);
+            System.out.println(suffixArray[i] +": "+ sArray[i]);
         }
         // Modified Merge Sort
 
