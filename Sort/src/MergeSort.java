@@ -1,16 +1,17 @@
 // Merge sort coding implementation
-public static void mergeSort(String[] a, int from, int to) {
+public class MergeSort {
+    public static void mergeSort(String[] a, int from, int to) {
         if (from == to) {
             return;
         }
-        
+
         int mid = (from + to) / 2;
         mergeSort(a, from, mid);
         mergeSort(a, mid + 1, to);
         merge(a, from, mid, to);
-}
+    }
 
-public static void merge(String[] a, int from, int mid, int to) {
+    public static void merge(String[] a, int from, int mid, int to) {
         int n = to - from + 1;
         String[] b = new String[n];
         int i1 = from;
@@ -21,7 +22,7 @@ public static void merge(String[] a, int from, int mid, int to) {
             if (a[i1].compareTo(a[i2]) < 0) {
                 b[j] = a[i1];
                 i1++;
-            } 
+            }
             else {
                 b[j] = a[i2];
                 i2++;
@@ -44,4 +45,7 @@ public static void merge(String[] a, int from, int mid, int to) {
         for (j = 0; j < n; j++) {
             a[from + j] = b[j];
         }
+    }
 }
+
+
