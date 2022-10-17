@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="52b14018-11ef-4f0e-8aac-68802a15924a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/src/Driver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/src/InsertionSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/src/MergeSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
