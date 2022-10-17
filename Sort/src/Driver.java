@@ -13,6 +13,7 @@ public class Driver {
         int left = 0;
         int end = input.length();
         String[] sArray = new String[end];
+        String[] values = new String[end];
 
         System.out.println();
         System.out.println("Suffix Array");
@@ -37,20 +38,20 @@ public class Driver {
         }
 
         // Modified Merge Sort
-        MergeSort Modified= new MergeSort();
-        
-        String [] suffixArray2=new String[sArray.length];
-        Modified.mergeSort(suffixArray2,0,suffixArray2.length-1);
-        
-        System.out.println();
-        System.out.println("Merge Sort");
-        
-        for (int i = 0; i < sArray.length; i++) {
-        System.out.println(suffixArray[i] +": "+ sArray[i]);
-        };
-        
-        
-        
-        
+        left = 0;
+
+        while (left < end){
+            values[left] = input.substring(left, end);
+            left++;
+        }
+        left = 0;
+
+        MergeSort.mergeSort(values, 0, values.length - 1);
+
+        System.out.println("\nMerge Sort:\n");
+        while (left < end){
+            System.out.println(left +": "+values[left]);
+            left++;
+        } 
     }
 }
