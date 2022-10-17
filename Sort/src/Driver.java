@@ -37,6 +37,20 @@ public class Driver {
         }
 
         // Modified Merge Sort
-
+        MergeSort Modified= new MergeSort();
+        
+        String [] suffixArray2=new String[sArray.length];
+        Modified.mergeSort(suffixArray2,0,suffixArray2.length-1);
+        
+        System.out.println();
+        System.out.println("Merge Sort");
+        
+        for (int i = 0; i < sArray.length; i++) {
+        System.out.println(suffixArray[i] +": "+ sArray[i]);
+        }
+        
+        
+        
+        
     }
 }
