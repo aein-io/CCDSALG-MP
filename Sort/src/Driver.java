@@ -47,7 +47,7 @@ public class Driver {
         
         for (int i = 0; i < sArray.length; i++) {
         System.out.println(suffixArray[i] +": "+ sArray[i]);
-        }
+        };
         
         
         
