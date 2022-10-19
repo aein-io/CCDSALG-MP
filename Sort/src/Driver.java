@@ -50,9 +50,8 @@ public class Driver {
 
         System.out.println();
         System.out.println("Merge Sort:");
-        while (left < end) {
-            System.out.println(left + ": " +values[left]);
-            left++;
-        } 
+        for (int p = 0; p < sArray.length; p++) {
+            System.out.println(suffixArray[p] +": "+ values[p]);
+        }
     }
 }
