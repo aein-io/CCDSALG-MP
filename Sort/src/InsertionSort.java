@@ -1,5 +1,5 @@
 public class InsertionSort {
-    public boolean CompareString (String str1, String str2) {
+    public boolean compareString (String str1, String str2) {
         int determiner = 0;
         int len1 = str1.length();
         int len2 = str2.length();
@@ -25,7 +25,7 @@ public class InsertionSort {
         return determiner < 0;
     }
 
-    public int[] Sort (String[] sArray, int[] suffixArray) {
+    public int[] insertionSort (String[] sArray, int[] suffixArray) {
         int len = sArray.length;
 
         // Instantiates the suffix array with 0s
@@ -40,7 +40,7 @@ public class InsertionSort {
 
             // Compare two strings together and swap indices if applicable
             // Updates the suffix array
-            while (j >= 0 && CompareString(key, sArray[j])) {
+            while (j >= 0 && compareString(key, sArray[j])) {
                 sArray[j + 1] = sArray[j];
                 suffixArray[j + 1] = suffixArray[j];
                 j = j - 1;

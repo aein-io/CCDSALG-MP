@@ -25,10 +25,10 @@ public class Driver {
         }
 
         // Modified Insertion Sort
-        InsertionSort Modified = new InsertionSort();
+        InsertionSort InsertionSort = new InsertionSort();
 
         int[] suffixArray = new int[sArray.length];
-        Modified.Sort(sArray, suffixArray);
+        InsertionSort.insertionSort(sArray, suffixArray);
 
         System.out.println();
         System.out.println("Insertion Sort:");
@@ -46,6 +46,7 @@ public class Driver {
         }
         left = 0;
 
+        MergeSort MergeSort = new MergeSort();
         MergeSort.mergeSort(values, 0, values.length - 1);
 
         System.out.println();

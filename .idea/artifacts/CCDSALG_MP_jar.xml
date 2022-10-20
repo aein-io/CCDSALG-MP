@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CCDSALG-MP:jar">
+    <output-path>$PROJECT_DIR$/../../Year 2/CCDSALG/artifacts/CCDSALG_MP_jar</output-path>
+    <root id="archive" name="CCDSALG-MP.jar">
+      <element id="module-output" name="CCDSALG-MP" />
+    </root>
+  </artifact>
+</component>
