@@ -1,3 +1,4 @@
+
 public class InsertionSort {
     public boolean compareString (String str1, String str2) {
         int determiner = 0;
