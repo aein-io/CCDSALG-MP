@@ -62,9 +62,73 @@ public class Driver {
 
         System.out.println("average time: " + averageTime/1000000.0 + " ms");
     }
+
+    public static void testMergeSort(int Size, int numTests, final String chars) {
+
+        MergeSort mergeSort = new MergeSort();
+
+        String[] testArray = new String[numTests];
+
+        for (int i = 0; i < numTests; i++) {
+            testArray[i] = StringRandomizer.Generate(Size, chars);
+
+            // print all the strings
+            System.out.println(testArray[i]);
+        }
+
+        long startTime = 0;
+        long endTime = 0;
+        long totalTime = 0;
+        long averageTime = 0;
+        long[] times = new long[numTests];
+
+        for (int i = 0; i < numTests; i++) {
+
+            String input;
+            input = testArray[i];
+
+            // Generate Substrings
+            int left = 0;
+            int end = input.length();
+            String[] sArray = new String[end];
+            int[] suffixArray = new int[sArray.length];
+
+            while (left < end) {
+                sArray[left] = input.substring(left, end);
+//                System.out.println(left + ": " + sArray[left]);
+                left++;
+            }
+
+            startTime = System.nanoTime();
+            mergeSort.mergeSort(sArray, 0, sArray.length - 1, suffixArray);
+            endTime = System.nanoTime();
+
+            System.out.println("TEST " + i);
+            for(String s : sArray) {
+                System.out.println(s);
+            }
+            System.out.println();
+
+            totalTime = endTime - startTime;
+            times[i] = totalTime;
+
+            averageTime += totalTime;
+        }
+
+        averageTime /= numTests;
+
+        // print out the times
+        for (int i = 0; i < numTests; i++) {
+            System.out.println("test " + (i) +" : "+ times[i]/1000000.0 + " ms");
+        }
+
+        System.out.println("average time: " + averageTime/1000000.0 + " ms");
+    }
+
     public static void main (String[] args) {
 
         testInsertion(128, 10, "acgt");
+        testMergeSort(128, 10, "acgt");
 
 //        Scanner scanner = new Scanner(System.in);
 //
